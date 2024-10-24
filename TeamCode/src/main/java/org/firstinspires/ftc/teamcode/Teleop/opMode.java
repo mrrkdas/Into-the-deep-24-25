@@ -6,15 +6,15 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorControllerEx;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 
-@TeleOp(name="opMode", group="Linear OpMode")
+@TeleOp(name="opMode")
 public class opMode extends LinearOpMode {
     public void runOpMode() {
-        DcMotor DcMotorA = hardwareMap.get(DcMotor.class, "Drive1");
-        DcMotor DcMotorB = hardwareMap.get(DcMotor.class, "Drive2");
-        DcMotor DcMotorC = hardwareMap.get(DcMotor.class, "Drive3");
-        DcMotor DcMotorD = hardwareMap.get(DcMotor.class, "Drive4");
-        DcMotorC.setDirection(DcMotorSimple.Direction.REVERSE);
-        DcMotorD.setDirection(DcMotorSimple.Direction.REVERSE);
+        DcMotor DcMotorA = hardwareMap.get(DcMotor.class, "bR");
+        DcMotor DcMotorB = hardwareMap.get(DcMotor.class, "bL");
+        DcMotor DcMotorC = hardwareMap.get(DcMotor.class, "tR");
+        DcMotor DcMotorD = hardwareMap.get(DcMotor.class, "tL");
+        DcMotorC.setDirection(DcMotorSimple.Direction.FORWARD);
+        DcMotorD.setDirection(DcMotorSimple.Direction.FORWARD);
 
 
         waitForStart();
